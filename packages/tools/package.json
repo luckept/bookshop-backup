@@ -1,0 +1,7 @@
+{
+  "name": "@bookshop/tools",
+  "version": "1.0.0",
+  "description": "",
+  "module": "index.ts",
+  "author": "yiwwhl <yiwwhl@qq.com>"
+}

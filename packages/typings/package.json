@@ -1,0 +1,14 @@
+{
+  "name": "@bookshop/typings",
+  "version": "1.0.0",
+  "description": "typings",
+  "scripts": {
+    "build": "ts-node ./scripts/buildTypings.ts"
+  },
+  "author": "yiwwhl <yiwwhl@qq.com>",
+  "module": "index.ts",
+  "license": "ISC",
+  "dependencies": {
+    "@bookshop/tools": "workspace:^"
+  }
+}
