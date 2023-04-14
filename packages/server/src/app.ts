@@ -3,7 +3,7 @@ import ExceptionProcessor from "./middlewares/ExceptionProcessor";
 import GlobalUtilsRegister from "./middlewares/GlobalUtilsRegister";
 import RouterAutoLoader from "./middlewares/RouterAutoLoader";
 
-const app = new Koa<{}, CustomContext>();
+const app = new Koa<{}>();
 
 app.use(ExceptionProcessor());
 app.use(GlobalUtilsRegister());

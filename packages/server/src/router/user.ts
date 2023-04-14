@@ -16,6 +16,13 @@ router.post("/addUser", async (ctx) => {
 
 router.get("/autoloader", async (ctx) => {
   ctx.success("测试", "ok");
+
+  ctx.trace("debug info");
+  ctx.debug("debug info");
+  ctx.info("debug info");
+  ctx.warn("debug info");
+  ctx.error("debug info");
+  ctx.fatal("debug info");
 });
 
 export default router;
