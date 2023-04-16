@@ -90,6 +90,9 @@ importers:
       '@bookshop/tools':
         specifier: workspace:^
         version: link:../tools
+      '@bookshop/typings':
+        specifier: workspace:^
+        version: link:../typings
       '@vitejs/plugin-vue-jsx':
         specifier: ^3.0.0
         version: 3.0.0(vite@4.1.0)(vue@3.2.45)
