@@ -1,5 +1,5 @@
-import { MiddleWareFn } from '../../server';
-import { CommonError } from './type';
+import { MiddleWareFn } from "../../server";
+import { CommonError } from "./type";
 
 function ExceptionProcessor(): MiddleWareFn {
   return async (ctx, next) => {

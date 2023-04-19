@@ -1,8 +1,8 @@
-import koaBody from 'koa-body';
-import koaJson from 'koa-json';
-import { MiddleWareFn } from '../../server';
-import { RouterLoader } from './RouterLoader';
-import { RouterAutoLoaderOptions } from './type';
+import koaBody from "koa-body";
+import koaJson from "koa-json";
+import { MiddleWareFn } from "../../server";
+import { RouterLoader } from "./RouterLoader";
+import { RouterAutoLoaderOptions } from "./type";
 
 function RouterAutoLoader(options?: RouterAutoLoaderOptions): MiddleWareFn {
   const rootRouter = RouterLoader.getRootRouter();

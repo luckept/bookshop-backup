@@ -1,11 +1,11 @@
-import { merge } from 'lodash';
-import { getLocalItem, setLocalItem } from '@bookshop/tools';
-import { GlobModuleType, ImageStore } from './type';
+import { merge } from "lodash";
+import { getLocalItem, setLocalItem } from "@bookshop/tools";
+import { GlobModuleType, ImageStore } from "./type";
 
-const IMAGE_STORE_NAME = 'asstes_images';
+const IMAGE_STORE_NAME = "asstes_images";
 
 function getImageName(name: string) {
-  return name.split('/').at(-1)?.split('.').at(-2)!;
+  return name.split("/").at(-1)?.split(".").at(-2)!;
 }
 function getImageAbsolutePath(module: GlobModuleType) {
   return module.default;
@@ -24,11 +24,11 @@ export class ImageCollector {
     // TODO: happy path. consider refactor
     if (isCacheHits()) return;
 
-    const images_png = import.meta.glob('@/assets/**/*.png', {
+    const images_png = import.meta.glob("@/assets/**/*.png", {
       eager: true,
     });
 
-    const images_jpg = import.meta.glob('@/assets/**/*.jpg', {
+    const images_jpg = import.meta.glob("@/assets/**/*.jpg", {
       eager: true,
     });
 
