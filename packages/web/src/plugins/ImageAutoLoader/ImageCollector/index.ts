@@ -2,7 +2,7 @@ import { merge } from "lodash";
 import { getLocalItem, setLocalItem } from "@bookshop/tools";
 import { GlobModuleType, ImageStore } from "./type";
 
-const IMAGE_STORE_NAME = "asstes_images";
+let IMAGE_STORE_NAME = "asstes_images";
 
 function getImageName(name: string) {
   return name.split("/").at(-1)?.split(".").at(-2)!;
@@ -20,7 +20,9 @@ function isCacheHits() {
 export class ImageCollector {
   static imageStore: ImageStore = {};
 
-  static collectAllImages() {
+  static collectAllImages(storageNamespace: string = "") {
+    storageNamespace !== "" && (IMAGE_STORE_NAME = storageNamespace);
+
     // TODO: happy path. consider refactor
     if (isCacheHits()) return;
 
