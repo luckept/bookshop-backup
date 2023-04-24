@@ -1,15 +1,13 @@
+import { isBrowser } from "../yw-checker";
 import { setItem, getItem, removeItem, clearAllItems } from "./base";
 import { MODE, StorageFunctionType } from "./type";
-
-// support node
-const window = globalThis as any;
 
 /**
  * underwrite warn
  */
 
 (function () {
-  if (!window) {
+  if (!isBrowser) {
     console.error("Non-browser environment!");
   }
 })();
