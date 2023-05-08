@@ -1,3 +1,4 @@
+import { userDao } from "../dao/UserDao";
 import { createRouter } from "../utils/RouterCreator";
 
 const router = createRouter();
@@ -23,6 +24,13 @@ router.get("/autoloader", async (ctx) => {
   ctx.warn("debug info");
   ctx.error("debug info");
   ctx.fatal("debug info");
+});
+
+router.get("/findUser/:username/:password", async (ctx) => {
+  const { username, password } = ctx.params;
+  const res = await userDao.findUser({ username, password });
+  ctx.trace(res);
+  ctx.success(res);
 });
 
 export default router;

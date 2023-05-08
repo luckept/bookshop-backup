@@ -1,1 +1,1 @@
-export type LogMessage = string;
+export type LogMessage = any;

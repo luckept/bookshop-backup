@@ -2,9 +2,6 @@ import Koa from "koa";
 import ExceptionProcessor from "./middlewares/ExceptionProcessor";
 import GlobalUtilsRegister from "./middlewares/GlobalUtilsRegister";
 import RouterAutoLoader from "./middlewares/RouterAutoLoader";
-import { DBConfig } from "./utils/DBConnector/DBConfigProducer";
-
-DBConfig.initConfig();
 
 const app = new Koa<{}, CustomContext>();
 

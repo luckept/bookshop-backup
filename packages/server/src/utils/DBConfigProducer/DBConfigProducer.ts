@@ -21,8 +21,8 @@ export class DBConfig {
         host: "localhost",
         user: "yiwwhl",
         password: "shijing",
-        database: "bookshop",
-        port: 3306,
+        database: "core",
+        port: 1234,
       },
       production: {
         host: "localhost",
