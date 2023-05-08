@@ -1,10 +1,12 @@
-import { baseDao } from "./BaseDao";
+import { User, userModel } from "../model/UserModel";
 
 class UserDao {
   static instance = new UserDao();
   findUser({ username, password }: any) {
     const sql = `select * from user where username="${username}" and password="${password}"`;
-    return baseDao.query<AnyObject[]>(sql);
+  }
+  addUser(user: User) {
+    userModel.create(user);
   }
 }
 

@@ -10,9 +10,9 @@ function RouterAutoLoader(options?: RouterAutoLoaderOptions): MiddleWareFn {
   rootRouterPrefix && rootRouter.prefix(rootRouterPrefix);
 
   return async ({ app }, next) => {
-    app.use(rootRouter.routes());
     app.use(koaJson());
     app.use(koaBody());
+    app.use(rootRouter.routes());
     await next();
   };
 }
