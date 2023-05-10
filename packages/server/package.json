@@ -5,7 +5,8 @@
   "module": "app.ts",
   "scripts": {
     "dev": "export NODE_ENV=development && nodemon --watch src/ -e ts --exec ts-node ./src/app.ts",
-    "prod": "export NODE_ENV=production && nodemon --watch src/ -e ts --exec ts-node ./src/app.ts"
+    "prod": "export NODE_ENV=production && nodemon --watch src/ -e ts --exec ts-node ./src/app.ts",
+    "test": "vitest"
   },
   "keywords": [],
   "author": "yiwwhl <yiwwhl@qq.com>",
