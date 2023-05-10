@@ -6,7 +6,12 @@ class UserDao {
     const sql = `select * from user where username="${username}" and password="${password}"`;
   }
   addUser(user: User) {
-    userModel.create(user);
+    return userModel.create(user);
+  }
+  findAllUser() {
+    return userModel.findAll({
+      raw: true,
+    });
   }
 }
 

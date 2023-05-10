@@ -15,7 +15,7 @@ export interface User {
 
 class UserModel {
   static create() {
-    return connection.define<Model<User>>(
+    const model = connection.define<Model<User>>(
       "user",
       {
         id: {
@@ -43,6 +43,7 @@ class UserModel {
           type: DataType.TINYINT,
           field: "valid",
           allowNull: true,
+          defaultValue: 1,
         },
         birthday: {
           type: DataType.DATE,
@@ -55,6 +56,8 @@ class UserModel {
         timestamps: false,
       }
     );
+    // model.sync({ force: false });
+    return model;
   }
 }
 

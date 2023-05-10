@@ -14,7 +14,7 @@ class ResponseBodyCreator {
     ResponseBodyCreator.ctx = ctx;
   }
 
-  static success(this: Context, data?: any, message?: any) {
+  static success(this: Context, data?: any, message: any = "操作成功") {
     ResponseBodyCreator.assemblyCtx(this);
     return ResponseBodyCreator.basicCreator(data, message, ResponseCode.SUCCESS);
   }

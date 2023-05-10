@@ -32,7 +32,14 @@ router.get("/findUser/:username/:password", async (ctx) => {
 router.post("/addUser", async (ctx) => {
   const user: User = ctx.request.body;
   const res = await userDao.addUser(user);
+  console.log(res);
   ctx.success(res);
+});
+
+router.get("/findAll", async (ctx) => {
+  const allUsers = await userDao.findAllUser();
+  ctx.trace(allUsers);
+  ctx.success(allUsers);
 });
 
 export default router;
