@@ -22,11 +22,12 @@ router.get("/autoloader", async (ctx) => {
   ctx.fatal("debug info");
 });
 
-router.get("/findUser/:username/:password", async (ctx) => {
-  const { username, password } = ctx.params;
-  const res = await userDao.findUser({ username, password });
-  ctx.trace(res);
-  ctx.success(res);
+router.get("/findUser", async (ctx) => {
+  ctx.success(await userDao.findUser());
+});
+
+router.get("/findOneUser", async (ctx) => {
+  ctx.success(await userDao.findOneUser("yiwwhl", "shijing2"));
 });
 
 router.post("/addUser", async (ctx) => {
