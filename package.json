@@ -7,6 +7,7 @@
     "preinstall": "node ./scripts/preinstall.js",
     "start:client": "pnpm -C ./packages/web dev",
     "build:client": "pnpm -C ./packages/web build",
+    "test:client": "pnpm -C ./packages/web test",
     "start:server": "pnpm -C ./packages/server dev",
     "test:server": "pnpm -C ./packages/server test",
     "build:typings": "pnpm -C ./packages/typings build"
